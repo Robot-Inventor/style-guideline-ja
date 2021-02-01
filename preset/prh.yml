@@ -1,0 +1,138 @@
+version: 1
+
+imports:
+    - spelling_inconsistency.yml
+    - hiraku.yml
+    - kanji-open.yml
+
+rules:
+    # ここからは日本語全般
+    - expected: わかる
+      pattern: /(解|判)(か|)る/
+      specs:
+          - from: 解る
+            to: わかる
+          - from: 判る
+            to: わかる
+      prh: 常用漢字表外の読み方を使用しています。
+
+    - expected: "..."
+      pattern: …
+      specs:
+        - from: …
+          to: "..."
+
+    - expected: "!?"
+      pattern: ！？
+      specs: 
+        - from: 嘘だろ！？
+          to: 嘘だろ!?
+      prh: 感嘆符と疑問符が連続するときは半角を使用します。
+
+    - expected: /
+      pattern: ／
+      specs:
+        - from: 文字A／文字B
+          to: 文字A/文字B
+
+    - expected: $1〜$2
+      pattern: /(\d+)～(\d+)/
+      specs:
+        - from: 0～1023の範囲
+          to: 0〜1023の範囲
+      prh: 数字の範囲は「～」（U+FF5E 全角チルダ）ではなく「〜」（U+301C 波ダッシュ）で表します。
+
+    - expected: $1–$2
+      pattern: /(\d+)―(\d+)/
+      specs:
+        - from: 0―1023の範囲
+          to: 0–1023の範囲
+      prh: 数字の範囲は「―」（U+2015 水平線）ではなく「–」（U+2013 二分ダッシュ）で表します。
+
+    - expected: " [$1] を$3"
+      pattern: /「(.*?)(\.\.\.|…|\.\.\.|)」を(クリック|選択|実行|ダブルクリック|右クリック|左クリック|タップ|タッチ|押す|押し|おす|おし|長押し|長おし|なが押し|ながおし)/
+      specs:
+        - from: 「参照...」をクリックしてください
+          to: " [参照] をクリックしてください"
+        - from: 「太郎」といいます。
+          to: 「太郎」といいます。
+      prh: メニューなどの名前は半角大括弧で囲んで前後に半角スペースを挿入し、三点リーダーは省略します。
+
+    - expected: $1
+      pattern: /^　(.*?)$/m
+      prh: 行頭に全角スペースは付けません。
+
+    - expected: 読み込み
+      patterns:
+        - 読込み
+        - 読込
+      specs:
+        - from: 読込みます
+          to: 読み込みます
+        - from: 読込します
+          to: 読み込みします
+
+    - expected: 貼り付け
+      patterns:
+        - 貼付け
+        - 貼付
+      specs:
+        - from: 貼付けます
+          to: 貼り付けます
+        - from: 貼付します
+          to: 貼り付けします
+
+    - expected: ください
+      pattern: 下さい
+      specs:
+        - from: 実行して下さい
+          to: 実行してください
+
+    - expected: お$1
+      pattern: /於(いて|ける)/
+      specs:
+        - from: コンピューターに於ける頭脳にあたる
+          to: コンピューターにおける頭脳にあたる
+
+    - expected: いる
+      pattern: 居る
+      specs:
+        - from: モンスターが居る
+          to: モンスターがいる
+
+    - expected: でき$1
+      pattern: /出来(る|そう|ます|ない|なく)/
+      specs:
+        - from: 実行出来る
+          to: 実行できる
+
+    - expected: のため
+      pattern: の為
+      specs:
+        - from: 学習の為に多くのデータセットが必要
+          to: 学習のために多くのデータセットが必要
+
+    - expected: ごと$1
+      pattern: /毎(に|の|で)/
+      specs:
+        - from: 1秒毎に動きます
+          to: 1秒ごとに動きます
+
+    - expected: $1か$2
+      pattern: /(\d+)[ヶケヵカ箇](月|所|国)/
+      specs:
+        - from: 1箇月の成果
+          to: 1か月の成果
+
+    - expected: ・
+      pattern: ･
+      specs:
+        - from: ･
+          to: ・
+
+    - expected: —
+      pattern: /(ー$|ー。)/
+      specs:
+        - from: 動いたのだったー
+          to: 動いたのだった—
+      prh: 説明に間をもたせるときは「—」(U+2014 全角ダッシュ) を使用します

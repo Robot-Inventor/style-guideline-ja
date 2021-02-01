@@ -1,0 +1,6 @@
+{
+    "textlint.configPath": "preset/.textlintrc",
+    "prh.configFiles": [
+        "preset/prh.yml"
+    ]
+}

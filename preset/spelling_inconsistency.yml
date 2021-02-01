@@ -1,0 +1,249 @@
+version: 1
+
+rules:
+    - expected: Web
+      patterns:
+        - ウェブ
+        - ウエブ
+      specs:
+        - from: ウエブサイト
+          to: Webサイト
+
+    - expected: Web
+      specs:
+        - from: webサイト
+          to: Webサイト
+
+    - expected: デフォルト
+      pattern: /(ディ|デ)フ(ォ|オ)ルト/
+      specs:
+        - from: ディフォルト
+          to: デフォルト
+        - from: デフオルト
+          to: デフォルト
+
+    - expected: ハードウェア
+      pattern: /ハードウ(ェ|エ)ア(ー|)/
+      specs:
+        - from: ハードウェアー
+          to: ハードウェア
+        - from: ハードウエア
+          to: ハードウェア
+
+    - expected: ソフトウェア
+      pattern: /ソフトウ(ェ|エ)ア(ー|)/
+      specs:
+        - from: ソフトウェアー
+          to: ソフトウェア
+        - from: ソフトウエア
+          to: ソフトウェア
+
+    - expected: サーバー
+      pattern: /サーバ(?!ー)/
+      specs:
+          - from: サーバ
+            to: サーバー
+
+    - expected: ウイルス
+      pattern: ウィルス
+      specs:
+        - from: ウィルス
+          to: ウイルス
+
+    - expected: ログイン
+      pattern: /(サイン|ログ)(イン|オン)/
+      specs:
+        - from: サインイン
+          to: ログイン
+        - from: ログオン
+          to: ログイン
+
+    - expected: ログアウト
+      pattern: /(サイン|ログ)(アウト|オフ)/
+      specs:
+        - from: サインアウト
+          to: ログアウト
+        - from: ログオフ
+          to: ログアウト
+
+    - expected: OS
+      patterns:
+        - オペレーティングシステム
+        - オペレーティング・システム
+      specs:
+        - from: オペレーティングシステム
+          to: OS
+        - from: オペレーティング・システム
+          to: OS
+
+    - expected: 行
+      pattern: /行な/
+      specs:
+        - from: 行なう
+          to: 行う
+
+    - expected: 読み込$1
+      pattern: /読込(ま|み|む|め|も)/
+      specs:
+        - from: 読込む
+          to: 読み込む
+
+    - expected: 読み込み
+      pattern: 読込
+      specs:
+        - from: 読込
+          to: 読み込み
+
+    - expected: 貼り付$1
+      pattern: /貼付(か|き|く|け|こ)/
+
+    - expected: 貼り付け
+      pattern: 貼付
+      specs:
+        - from: 貼付
+          to: 貼り付け
+
+    - expected: YouTube
+      pattern: ユーチューブ
+      specs:
+        - from: ユーチューブ
+          to: YouTube
+
+    - expected: YouTube
+      pattern: /you(| )tube/i
+      specs:
+        - from: Youtube
+          to: YouTube
+
+    - expected: YouTuber
+      patterns:
+        - ユーチューバー
+        - ユーチューバ
+      specs:
+        - from: ユーチューバー
+          to: YouTuber
+
+    - expected: YouTuber
+      pattern: /you(| )tuber/i
+      specs:
+        - from: Youtuber
+          to: YouTuber
+
+    - expected: クリック
+      pattern: 左クリック
+      specs:
+        - from: 左クリックする
+          to: クリックする
+
+    - expected: 取り扱$1
+      pattern: /取扱(い|う|え|お|わ)/
+      specs:
+        - from: 取扱う
+          to: 取り扱う
+
+    - expected: 取り扱い
+      pattern: 取扱
+      specs:
+        - from: 取扱
+          to: 取り扱い
+
+    - expected: 引っ越$1
+      pattern: /引越(さ|し|す|せ|そ)/
+      specs:
+        - from: 引越し
+          to: 引っ越し
+
+    - expected: 引っ越し
+      pattern: 引越
+      specs:
+        - from: 引越
+          to: 引っ越し
+
+    - expected: 受け付け
+      pattern: /受(け|)付(け|)/
+      specs:
+        - from: 受付
+          to: 受け付け
+
+    - expected: Wi-Fi
+      pattern: ワイファイ
+      specs:
+        - from: ワイファイ
+          to: Wi-Fi
+
+    - expected: Wi-Fi
+      pattern: /wi(|-)fi/i
+      specs:
+        - from: wifi
+          to: Wi-Fi
+
+    - expected: コンピューター
+      pattern: /コンピュ(ー|)タ(ー|)/
+      specs:
+        - from: コンピュータ
+          to: コンピューター
+
+    - expected: 仮想現実
+      pattern: /バーチャル(・|)リアリティ(ー|)/
+      specs:
+        - from: バーチャルリアリティ
+          to: 仮想現実
+
+    - expected: ディープラーニング
+      patterns:
+        - ディープ・ラーニング
+        - 深層学習
+      specs:
+        - from: 深層学習
+          to: ディープラーニング
+
+    - expected: 機械学習
+      patterns:
+        - マシンラーニング
+        - マシン・ラーニング
+      specs:
+        - from: マシンラーニング
+          to: 機械学習
+
+    - expected: AI
+      pattern: 人工知能
+      specs:
+        - from: 人工知能
+          to: AI
+
+    - expected: かもしれ$1
+      pattern: /かも知れ(ない|ず|ません)/
+      specs:
+        - from: かも知れない
+          to: かもしれない
+
+    - expected: ディスプレイ
+      pattern: ディスプレー
+      specs:
+        - from: ディスプレー
+          to: ディスプレイ
+
+    - expected: Twitter
+      patterns:
+        - ツイッター
+        - ツイッタ
+      specs:
+        - from: ツイッター
+          to: Twitter
+
+    - expected: Twitter
+      specs:
+        - from: twitter
+          to: Twitter
+
+    - expected: ツイート
+      pattern: /tweet/i
+      specs:
+        - from: Tweetする
+          to: ツイートする
+
+    - expected: カンマ
+      pattern: コンマ
+      specs:
+        - from: コンマ
+          to: カンマ

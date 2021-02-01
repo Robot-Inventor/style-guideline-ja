@@ -1,0 +1,56 @@
+version: 1
+
+rules:
+    - expected: でき$1
+      pattern: /出来(る|ない|ず|れ|よう|ます|ました|た|て|ろ|よ)/
+      specs:
+        - from: 出来る
+          to: できる
+
+    - expected: くださ$1
+      pattern: /下さ(ら|り|る|れ|ろ|い|っ)/
+      specs:
+        - from: 下さい
+          to: ください
+
+    - expected: お$1
+      pattern: /於(ける|いて)/
+      specs:
+        - from: 於いて
+          to: おいて
+
+    - expected: い$1
+      pattern: /居(る|れ|よ|ない)/
+      specs:
+        - from: 居ない
+          to: いない
+
+    - expected: $1ため
+      pattern: /(の|ない|たい|う|く|す|つ|ぬ|ふ|む|ゆ|る)為/
+      specs:
+        - from: 動く為
+          to: 動くため
+
+    - expected: おかげさま
+      pattern: /お陰(様|さま)/
+      specs:
+        - from: お陰様で
+          to: おかげさまで
+
+    - expected: おかげで
+      pattern: お陰で
+      specs:
+        - from: お陰で
+          to: おかげで
+
+    - expected: $1み$2
+      pattern: /(して|やって|いて)見(た|つ|て|る)/
+      specs:
+        - from: やって見た
+          to: やってみた
+
+    - expected: なおさら
+      pattern: 尚更
+      specs:
+        - from: 尚更
+          to: なおさら
