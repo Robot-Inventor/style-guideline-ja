@@ -36,10 +36,10 @@ npm install textlint-rule-preset-ja-spacing textlint-rule-preset-ja-technical-wr
 
 ## 目次
 
-- [スペースについて](guidline/spacing.md)
-- [全体について](guidline/overall.md)
-- [単位などについて](guidline/unit.md)
-- [カタカナについて](guidline/katakana.md)
-- [表記ゆれについて](guidline/spelling_inconsistency.md)
-- [開く漢字](guidline/hiraku.md)
-- [閉じるひらがな](guidline/tojiru.md)
+- [スペースについて](guideline/spacing.md)
+- [全体について](guideline/overall.md)
+- [単位などについて](guideline/unit.md)
+- [カタカナについて](guideline/katakana.md)
+- [表記ゆれについて](guideline/spelling_inconsistency.md)
+- [開く漢字](guideline/hiraku.md)
+- [閉じるひらがな](guideline/tojiru.md)
