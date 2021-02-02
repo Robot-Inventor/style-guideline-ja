@@ -131,7 +131,8 @@ rules:
           to: ・
 
     - expected: —
-      pattern: /(ー$|ー。)/
+      pattern: /([ァ-ヶ])?(ー$|ー。)/
+      regexpMustEmpty: $1
       specs:
         - from: 動いたのだったー
           to: 動いたのだった—
