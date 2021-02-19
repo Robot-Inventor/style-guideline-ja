@@ -247,3 +247,9 @@ rules:
       specs:
         - from: コンマ
           to: カンマ
+
+    - expected: ダークモード
+      pattern: ダークテーマ
+      specs:
+        - from: ダークテーマ
+          to: ダークモード

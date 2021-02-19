@@ -33,6 +33,7 @@
 |Twitter　twitter　ツイッター|Twitter|
 |ツイート　Tweet　tweet|ツイート|
 |コンマ　カンマ|カンマ|
+|ダークテーマ　ダークモード|ダークモード|
 
 次のリストはkanji-open.ymlのものです。
 
