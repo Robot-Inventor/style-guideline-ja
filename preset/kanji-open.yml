@@ -77,7 +77,7 @@ rules:
       - from: 事業
         to:   事業
   - expected: $1とき
-    pattern:  /(の)時(?!点|代|々|間)/
+    pattern:  /(の)時(?!点|代|々|間|刻)/
     specs:
       - from: その時
         to:   そのとき
