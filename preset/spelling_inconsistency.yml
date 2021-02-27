@@ -10,9 +10,13 @@ rules:
           to: Webサイト
 
     - expected: Web
+      options:
+        wordBoundary: true
       specs:
         - from: webサイト
           to: Webサイト
+        - from: webpack
+          to: webpack
 
     - expected: デフォルト
       pattern: /(ディ|デ)フ(ォ|オ)ルト/
