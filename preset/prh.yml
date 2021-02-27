@@ -3,7 +3,19 @@ version: 1
 imports:
     - spelling_inconsistency.yml
     - hiraku.yml
-    - kanji-open.yml
+    - collection/kanji-open.yml
+    - collection/css.yml
+    - collection/javascript.yml
+    - collection/other.yml
+    - collection/software.yml
+    - collection/typo.yml
+    - icsmedia_preset/prh_cho_on.yml
+    - icsmedia_preset/prh_corporation.yml
+    - icsmedia_preset/prh_duplicate.yml
+    - icsmedia_preset/prh_idiom.yml
+    - icsmedia_preset/prh_open_close.yml
+    - icsmedia_preset/prh_redundancy.yml
+    - icsmedia_preset/prh_web_technology.yml
 
 rules:
     # ここからは日本語全般

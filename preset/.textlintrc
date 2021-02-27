@@ -64,7 +64,6 @@
             "ja-unnatural-alphabet": true,
             "no-unmatched-pair": true
         },
-        "spellcheck-tech-word": true,
         "preset-japanese": {
             "max-ten": {
                 "max": 3
