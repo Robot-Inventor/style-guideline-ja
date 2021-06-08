@@ -198,10 +198,13 @@ rules:
   - expected: TrueType
     pattern: True Type
     prh: （技術用語）
+  # - expected: TypeScript
+  #   patterns:
+  #     - Typescript
+  #     - Type Script
   - expected: TypeScript
     patterns:
-      - Typescript
-      - Type Script
+      - /type(| )script/i
     prh: （技術用語）
   - expected: USB Type-C
     patterns:
@@ -272,8 +275,11 @@ rules:
       - You Tube
       - you tube
     prh: （技術用語）
-  - pattern: インターフェース
-    expected: インターフェイス
+  # - pattern: インターフェース
+  #   expected: インターフェイス
+  #   prh: （技術用語）
+  - pattern: インターフェイス
+    expected: インターフェース
     prh: （技術用語）
   - expected: ソフトウェア
     pattern: ソフトウェアー
