@@ -1,6 +1,10 @@
 {
-    "filters": {
-        "comments": true
+    "plugins": {
+        "@textlint/markdown": {
+            "extensions": [
+                ".mdx"
+            ]
+        }
     },
     "rules": {
         "preset-ja-spacing": {
@@ -93,7 +97,11 @@
         "no-duplicated-bunmatsu-hyougen": true,
         "period-in-list-item": {
             "periodMark": "",
-            "periodMarks": [".", "。", "．"],
+            "periodMarks": [
+                ".",
+                "。",
+                "．"
+            ],
             "ignoreLinkEnd": true,
             "allowPeriodMarks": [],
             "allowEmoji": false,
