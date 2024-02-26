@@ -1,6 +1,7 @@
 version: 1
 
 imports:
+  - mozilla-editorial-guideline/mozilla-editorial-guideline.yml
   - spelling_inconsistency.yml
   - hiraku.yml
   - collection/kanji-open.yml

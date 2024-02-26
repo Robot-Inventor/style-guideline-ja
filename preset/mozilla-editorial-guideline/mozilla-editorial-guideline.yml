@@ -1,0 +1,428 @@
+rules:
+  - pattern: クリアー
+    expected: クリア
+    prh: -ear、-eer、-re、-ty、-dy で終わる単語は長音を付加しません
+    specs:
+      - from: メモリーをクリアーした
+        to: メモリーをクリアした
+  - pattern: /サイドバ(?!ー)/
+    expected: サイドバー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: サイドバを開く
+        to: サイドバーを開く
+  - pattern: /ポリシ(?!ー)/
+    expected: ポリシー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: プライバシーポリシを読む
+        to: プライバシーポリシーを読む
+  - pattern: /プライバシ(?!ー)/
+    expected: プライバシー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: プライバシポリシーを読む
+        to: プライバシーポリシーを読む
+  - pattern: ピアー
+    expected: ピア
+    prh: -ear、-eer、-re、-ty、-dy で終わる単語は長音を付加しません
+    options:
+      - wordBoundary: true
+    specs:
+      - from: ピアーツーピア
+        to: ピアツーピア
+  - pattern: ボランティアー
+    expected: ボランティア
+    prh: -ear、-eer、-re、-ty、-dy で終わる単語は長音を付加しません
+    specs:
+      - from: ボランティアー活動
+        to: ボランティア活動
+  - pattern: /アセンブラ(?!ー)/
+    expected: アセンブラー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: アセンブラ言語
+        to: アセンブラー言語
+  - pattern: /ブラウザ(?!ー)/
+    expected: ブラウザー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: Webブラウザを使う
+        to: Webブラウザーを使う
+  - pattern: /バッファ(?!ー)/
+    expected: バッファー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: バッファに保存する
+        to: バッファーに保存する
+  - pattern: /ビルダ(?!ー)/
+    expected: ビルダー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: ビルダを起動する
+        to: ビルダーを起動する
+  - pattern: /コンパイラ(?!ー)/
+    expected: コンパイラー
+    specs:
+      - from: コンパイラのバグ
+        to: コンパイラーのバグ
+  - pattern: /コンピュータ(?!ー)/
+    expected: コンピューター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: コンピュータを起動する
+        to: コンピューターを起動する
+  - pattern: /カウンタ(?!ー)/
+    expected: カウンター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: カウンタを利用する
+        to: カウンターを利用する
+  - pattern: /デバッガ(?!ー)/
+    expected: デバッガー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: デバッガを使う
+        to: デバッガーを使う
+  - pattern: /ダウンローダ(?!ー)/
+    expected: ダウンローダー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: 外部のダウンローダを利用する
+        to: 外部のダウンローダーを利用する
+  - pattern: /フィルタ(?!ー)/
+    expected: フィルター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: フィルタする
+        to: フィルターする
+  - pattern: /フォルダ(?!ー)/
+    expected: フォルダー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: フォルダを開く
+        to: フォルダーを開く
+  - pattern: /フッタ(?!ー)/
+    expected: フッター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: フッタを作成する
+        to: フッターを作成する
+  - pattern: /ゲッタ(?!ー)/
+    expected: ゲッター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: ゲッタを定義する
+        to: ゲッターを定義する
+  - pattern: /ハンドラ(?!ー)/
+    expected: ハンドラー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: ハンドラを設定する
+        to: ハンドラーを設定する
+  - pattern: /ヘッダ(?!ー)/
+    expected: ヘッダー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: ヘッダを作成する
+        to: ヘッダーを作成する
+  - pattern: /インター?プリタ(?!ー)/
+    expected: インタープリター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: インタープリタ言語
+        to: インタープリター言語
+  - pattern: /インタプリター?/
+    expected: インタープリター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: インタプリタ言語
+        to: インタープリター言語
+      - from: インタプリター言語
+        to: インタープリター言語
+  - pattern: /リスナ(?!ー)/
+    expected: リスナー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: イベントリスナを定義する
+        to: イベントリスナーを定義する
+  - pattern: /マネージャ(?!ー)/
+    expected: マネージャー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: ファイルマネージャ
+        to: ファイルマネージャー
+  - pattern: /メンバ(?!ー)/
+    expected: メンバー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: メンバにアクセスする
+        to: メンバーにアクセスする
+  - pattern: /パラメータ(?!ー)/
+    expected: パラメーター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: パラメータを受け取る
+        to: パラメーターを受け取る
+  - pattern: /パーサ(?!ー)/
+    expected: パーサー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: パーサを使う
+        to: パーサーを使う
+  - pattern: /ピッカ(?!ー)/
+    expected: ピッカー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: カラーピッカ
+        to: カラーピッカー
+  - pattern: /プレースホルダ(?!ー)/
+    expected: プレースホルダー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: プレースホルダを設定する
+        to: プレースホルダーを設定する
+  - pattern: /プレーヤ(?!ー)/
+    expected: プレーヤー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: ビデオプレーヤ
+        to: ビデオプレーヤー
+  - pattern: /ポインタ(?!ー)/
+    expected: ポインター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: メモリーのポインタ
+        to: メモリーのポインター
+  - pattern: /プリンタ(?!ー)/
+    expected: プリンター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: プリンタで印刷する
+        to: プリンターで印刷する
+  - pattern: /プログラマ(?!ー)/
+    expected: プログラマー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: プログラマの仕事
+        to: プログラマーの仕事
+  - pattern: /プロバイダ(?!ー)/
+    expected: プロバイダー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: インターネットプロバイダ
+        to: インターネットプロバイダー
+  - pattern: /リーダ(?!ー)/
+    expected: リーダー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: SDカードリーダ
+        to: SDカードリーダー
+  - pattern: /レジスタ(?!ー)/
+    expected: レジスター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: CPUのレジスタ
+        to: CPUのレジスター
+  - pattern: /レポータ(?!ー)/
+    expected: レポーター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: レポータの出力を精査する
+        to: レポーターの出力を精査する
+  - pattern: /リサイザ(?!ー)/
+    expected: リサイザー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: リサイザで大きさを変える
+        to: リサイザーで大きさを変える
+  - pattern: /ルータ(?!ー)/
+    expected: ルーター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: ルータを接続する
+        to: ルーターを接続する
+  - pattern: /スキャナ(?!ー)/
+    expected: スキャナー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: スキャナでスキャンする
+        to: スキャナーでスキャンする
+  - pattern: /サーバ(?!ー)/
+    expected: サーバー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: サーバルーム
+        to: サーバールーム
+  - pattern: /セッタ(?!ー)/
+    expected: セッター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: セッタを定義する
+        to: セッターを定義する
+  - pattern: /スペーサ(?!ー)/
+    expected: スペーサー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: スペーサでスペースを確保する
+        to: スペーサーでスペースを確保する
+  - pattern: /トリガ(?!ー)/
+    expected: トリガー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: トリガとなって関数が呼び出される
+        to: トリガーとなって関数が呼び出される
+  - pattern: /アップローダ(?!ー)/
+    expected: アップローダー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: アップローダで動画をアップロードする
+        to: アップローダーで動画をアップロードする
+  - pattern: /ユーザ(?!ー)/
+    expected: ユーザー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: ユーザが離脱した
+        to: ユーザーが離脱した
+  - pattern: /ビューア(?!ー)/
+    expected: ビューアー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: PDFビューア
+        to: PDFビューアー
+  - pattern: /ワーカ(?!ー)/
+    expected: ワーカー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: サービスワーカ
+        to: サービスワーカー
+  - pattern: /ラッパ(?!ー)/
+    expected: ラッパー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: ラッパを作る
+        to: ラッパーを作る
+  - pattern: /ディストリビュータ(?!ー)/
+    expected: ディストリビューター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: Linuxディストリビュータ
+        to: Linuxディストリビューター
+  - pattern: /ジェネレータ(?!ー)/
+    expected: ジェネレーター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: ジェネレータで生成する
+        to: ジェネレーターで生成する
+  - pattern: /インジケータ(?!ー)/
+    expected: インジケーター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: インジケータを読む
+        to: インジケーターを読む
+  - pattern: /イテレータ(?!ー)/
+    expected: イテレーター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: イテレータを回す
+        to: イテレーターを回す
+  - pattern: /ライセンサ(?!ー)/
+    expected: ライセンサー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: ライセンサがライセンスする
+        to: ライセンサーがライセンスする
+  - pattern: /オペレータ(?!ー)/
+    expected: オペレーター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: オペレータに問い合わせる
+        to: オペレーターに問い合わせる
+  - pattern: /ベクタ(?!ー)/
+    expected: ベクター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: ベクタ画像
+        to: ベクター画像
+  - pattern: /バイブレータ(?!ー)/
+    expected: バイブレーター
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: バイブレータが振るえる
+        to: バイブレーターが振るえる
+  - pattern: /バッテリ(?!ー)/
+    expected: バッテリー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: バッテリを充電する
+        to: バッテリーを充電する
+  - pattern: /バイナリ(?!ー)/
+    expected: バイナリー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: バイナリエディター
+        to: バイナリーエディター
+  - pattern: /ディレクトリ(?!ー)/
+    expected: ディレクトリー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: ディレクトリに移動する
+        to: ディレクトリーに移動する
+  - pattern: /ギャラリ(?!ー)/
+    expected: ギャラリー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: ギャラリを見る
+        to: ギャラリーを見る
+  - pattern: /メモリ(?!ー)/
+    expected: メモリー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: メモリカード
+        to: メモリーカード
+  - pattern: アクセシビリティー
+    expected: アクセシビリティ
+    prh: -ear、-eer、-re、-ty、-dy で終わる単語は長音を付加しません
+    specs:
+      - from: アクセシビリティー要件を満たす
+        to: アクセシビリティ要件を満たす
+  - pattern: ポータビリティー
+    expected: ポータビリティ
+    specs:
+      - from: ポータビリティーは重要だ
+        to: ポータビリティは重要だ
+  - pattern: プロパティー
+    expected: プロパティ
+    prh: -ear、-eer、-re、-ty、-dy で終わる単語は長音を付加しません
+    specs:
+      - from: プロパティーを定義する
+        to: プロパティを定義する
+  - pattern: セキュリティー
+    expected: セキュリティ
+    prh: -ear、-eer、-re、-ty、-dy で終わる単語は長音を付加しません
+    specs:
+      - from: セキュリティー監査に合格する
+        to: セキュリティ監査に合格する
+  - pattern: ハードウェアー
+    expected: ハードウェア
+    specs:
+      - from: ハードウェアーを設計する
+        to: ハードウェアを設計する
+  - pattern: ソフトウェアー
+    expected: ソフトウェア
+    prh: -ear、-eer、-re、-ty、-dy で終わる単語は長音を付加しません
+    specs:
+      - from: ソフトウェアー産業
+        to: ソフトウェア産業
+  - pattern: /プロキシ(?!ー)/
+    expected: プロキシー
+    prh: -er、-or、-ar、-cy、-ry、-gy、-xy で終わる単語はすべて長音を付加します
+    specs:
+      - from: プロキシを通す
+        to: プロキシーを通す
+  - pattern: ファイアーウォール
+    expected: ファイアウォール
+    specs:
+      - from: ファイアーウォールを無効化する
+        to: ファイアウォールを無効化する
+    prh: -ear、-eer、-re、-ty、-dy で終わる単語は長音を付加しません
