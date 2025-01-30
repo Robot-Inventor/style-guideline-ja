@@ -1,0 +1,51 @@
+version: 1
+
+rules:
+
+  # Web関連
+  - patterns:
+      - nodejs
+      - node.js
+    expected: Node.js
+
+  - pattern: /type ?script/i
+    expected: TypeScript
+
+  - expected: ESLint
+  - expected: prh
+  - expected: textlint
+
+  # バンドラー関連
+  - expected: webpack
+  - expected: Rspack
+  - expected: SWC
+  - expected: Vite
+  - expected: Babel
+
+  # ブラウザー関連
+  - expected: Firefox
+  - expected: Chrome
+  - expected: Edge
+  - expected: Safari
+
+  # Apple関連
+  - expected: macOS
+  - expected: iOS
+  - expected: iPadOS
+
+  # Google関連
+  - expected: Google
+  - expected: Gmail
+
+  - patterns:
+      - google drive
+      - /google ?ドライブ/i
+    expected: Googleドライブ
+
+  - patterns:
+      - /google photos?/
+      - /google ?フォト/i
+    expected: Googleフォト
+
+  # 会社名など
+  - expected: Cloudflare
