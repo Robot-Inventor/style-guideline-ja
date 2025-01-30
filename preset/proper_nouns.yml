@@ -37,15 +37,17 @@ rules:
   - expected: Google
   - expected: Gmail
 
-  - patterns:
-      - google drive
-      - /google ?ドライブ/i
+  - pattern: /google ?(drive|ドライブ)/i
     expected: Googleドライブ
+    specs:
+      - from: Google Drive
+        to: Googleドライブ
 
-  - patterns:
-      - /google photos?/
-      - /google ?フォト/i
+  - pattern: /google ?(photos?|フォト)/i
     expected: Googleフォト
+    specs:
+      - from: Google Photos
+        to: Googleフォト
 
   # 会社名など
   - expected: Cloudflare

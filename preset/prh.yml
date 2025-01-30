@@ -5,6 +5,7 @@ imports:
   - spelling_inconsistency.yml
   - hiraku.yml
   - ai.yml
+  - proper_nouns.yml
   - path: collection/kanji-open.yml
     ignoreRules:
       - ほかの
