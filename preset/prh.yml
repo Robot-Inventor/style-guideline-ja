@@ -4,6 +4,7 @@ imports:
   - mozilla-editorial-guideline/mozilla-editorial-guideline.yml
   - spelling_inconsistency.yml
   - hiraku.yml
+  - ai.yml
   - path: collection/kanji-open.yml
     ignoreRules:
       - ほかの

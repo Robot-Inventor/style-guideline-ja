@@ -1,0 +1,146 @@
+version: 1
+
+rules:
+  - patterns:
+      - chatgpt
+      - chat gpt
+    expected: ChatGPT
+    specs:
+      - from: chat gptを使う
+        to: ChatGPTを使う
+
+  - pattern: /チャットgpt/i
+    expected: ChatGPT
+    specs:
+      - from: チャットgpt
+        to: ChatGPT
+
+  - expected: OpenAI
+    specs:
+      - from: openAI
+        to: OpenAI
+
+  - pattern: /オープンai/i
+    expected: OpenAI
+    specs:
+      - from: オープンAI
+        to: OpenAI
+
+  - expected: ChatGPT search
+    prh: 「ChatGPT search」の「s」は小文字です。
+
+  - patterns:
+      - search gpt
+      - searchgpt
+    expected: ChatGPT search
+    prh: 「SearchGPT」はプロトタイプの名称で、正式版の名称はChatGPT searchです。
+
+  - patterns:
+      - deepseek
+      - deepseak
+      - deep seek
+      - deep seak
+      - ディープシーク
+      - ディープ・シーク
+    expected: DeepSeek
+
+  - expected: Llama
+
+  - pattern: /chatgpt[- ]?(4|4o|3\.5)/i
+    expected: GPT-$1
+    specs:
+      - from: ChatGPT4
+        to: GPT-4
+      - from: ChatGPT-3.5
+        to: GPT-3.5
+    prh: AIとチャットできるサービスの名称を指したい場合はChatGPT、モデル名を指したい場合はGPT-4のように正確に表記します。（https://openai.com/brand/ 参照）
+
+  - pattern: /chatgpt[- ]?4o[- ]?mini/i
+    expected: GPT-4o mini
+    specs:
+      - from: ChatGPT 4o mini
+        to: GPT-4o mini
+      - from: ChatGPT4o-mini
+        to: GPT-4o mini
+    prh: AIとチャットできるサービスの名称を指したい場合はChatGPT、モデル名を指したい場合はGPT-4o miniのように正確に表記します。（https://openai.com/brand/ 参照）
+
+  - pattern: /chatgpt[- ]?o1/i
+    expected: OpenAI o1
+    specs:
+      - from: chatgpt-o1
+        to: OpenAI o1
+    prh: AIとチャットできるサービスの名称を指したい場合はChatGPT、モデル名を指したい場合はOpenAI o1のように正確に表記します。（https://openai.com/brand/ 参照）
+
+  - pattern: /chatgpt[- ]?o1[- ]?mini/i
+    expected: OpenAI o1-mini
+    specs:
+      - from: chatgpt-o1 mini
+        to: OpenAI o1-mini
+    prh: AIとチャットできるサービスの名称を指したい場合はChatGPT、モデル名を指したい場合はOpenAI o1-miniのように正確に表記します。（https://openai.com/brand/ 参照）
+
+
+  - pattern: /openai[- ]?o1/i
+    expected: OpenAI o1
+    specs:
+      - from: OpenAI-o1
+        to: OpenAI o1
+    prh: モデル名はOpenAI o1のように正確に表記します。（https://openai.com/brand/ 参照）
+
+  - pattern: /openai[- ]?o1[- ]?mini/i
+    expected: OpenAI o1-mini
+    specs:
+      - from: OpenAI o1mini
+        to: OpenAI o1-mini
+    prh: モデル名はOpenAI o1-miniのように正確に表記します。（https://openai.com/brand/ 参照）
+
+  - expected: ChatGPT Plus
+
+  - pattern: /chatgpt ?プラス/i
+    expected: ChatGPT Plus
+    specs:
+      - from: chatgptプラス
+        to: ChatGPT Plus
+
+  - expected: ChatGPT Pro
+
+  - pattern: /chatgpt ?プロ/i
+    expected: ChatGPT Pro
+    specs:
+      - from: chatgptプロ
+        to: ChatGPT Pro
+
+  - expected: Sora
+  - expected: xAI
+  - expected: Grok
+  - expected: Ollama
+  - expected: Gemini
+  - expected: Gemma
+  - expected: Anthropic
+  - expected: Claude
+  - expected: Copilot
+
+  - pattern: /git ?hub ?(copilot|コパイロット)/i
+    expected: GitHub Copilot
+    specs:
+      - from: Github copilot
+        to: GitHub Copilot
+
+  - patterns:
+      - perplexity
+      - /パープレキシティー?/
+    expected: Perplexity
+    specs:
+      - from: パープレキシティー
+        to: Perplexity
+
+  - pattern: /notebook ?lm/i
+    expected: NotebookLM
+    specs:
+      - from: Notebook lm
+        to: NotebookLM
+
+  - pattern: /(copilot|コパイロット)[\+＋]? ?pc/i
+    expected: Copilot+ PC
+    specs:
+      - from: コパイロット＋PC
+        to: Copilot+ PC
