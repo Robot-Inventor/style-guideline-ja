@@ -54,3 +54,6 @@ rules:
       specs:
         - from: 尚更
           to: なおさら
+
+    - expected: ほか$1
+      pattern:  /他(な|に|の|は|が|も|こそ|しか|さえ)/
